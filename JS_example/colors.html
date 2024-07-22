@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>COLORS</title>
+        <script>
+                //change color to red
+/*
+            document.addEventListener('DOMContentLoaded',function(){  //primero permitira todos los objetos de la pagina crearce y luego puede ejecutar algo, en este caso una función
+
+                document.querySelector('#red').onclick = function(){
+                    document.querySelector('#hello').style.color = 'red';
+                };
+                document.querySelector('#blue').onclick = function(){
+                    document.querySelector('#hello').style.color = 'blue';
+                };
+                document.querySelector('#green').onclick = function(){
+                    document.querySelector('#hello').style.color = 'green';
+                };
+            });
+*/
+  
+/*  
+            document.addEventListener('DOMContentLoaded',function(){  //primero permitira todos los objetos de la pagina crearce y luego puede ejecutar algo, en este caso una función
+           
+            document.querySelectorAll('button').forEach(function(button){ //agrupara a todos los botones de la pagina
+                button.onclick=function(){
+                    document.querySelector('#hello').style.color = button.dataset.color;
+                } //cambiara el color de idHello utilizano el dato color guardado por boton
+           
+            });
+        });
+*/
+        document.addEventListener('DOMContentLoaded', () => {  //primero permitira todos los objetos de la pagina crearce y luego puede ejecutar algo, en este caso una función
+           
+           document.querySelector('select').onchange = function() { //agrupara a todos los botones de la pagina
+                document.querySelector('#hello').style.color = this.value;
+           };
+       });
+        </script>
+    </head>
+    <body>
+        <h1 id="hello">Hello!</h1>
+        <!--
+        <button data-color="red">RED</button>
+        <button data-color="blue">BLUE</button>
+        <button data-color="green">GREEN</button>
+        -->
+        <select>
+            <option value="black">black</option>
+            <option value="red">red</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+        </select>
+    </body>
+
+
+</html>
