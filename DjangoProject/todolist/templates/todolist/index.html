@@ -1,0 +1,14 @@
+
+{% extends "todolist/layout.html" %}
+
+{% block body %}
+        <h1>Add task</h1>    
+        <ul>
+            {% for todolist in todolist %}
+                <li>{{ todolist }}  </li>
+            {% empty %}
+                 <li>No tasks </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'todolist:add' %}"> Add a New Task</a>
+{% endblock %}
